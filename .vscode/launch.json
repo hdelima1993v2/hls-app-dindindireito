@@ -12,10 +12,10 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "args": [
-                "--PATH_ARCHIVE","C:/Users/herna/Desktop/projetos_python/06_Automacao_financeiro/01_entrada",
-                "--PATH_YAML","${workspaceFolder}/app/config",
-                "--CAMINHO_BUCKET","C:/Users/herna/Desktop/projetos_python/06_Automacao_financeiro",
-                "--PATH_CATEGORY","${workspaceFolder}/app/config/dexpara_categoria.csv",
+                "--PATH_ARCHIVE","/home/hernandes-linux/Área de trabalho/projetos-git/automacao-financeiro/",
+                "--PATH_YAML","${workspaceFolder}/config",
+                "--CAMINHO_BUCKET","/home/hernandes-linux/Área de trabalho/projetos-git/",
+                "--PATH_CATEGORY","${workspaceFolder}/config/dexpara_categoria.csv",
             ]
         }
     ]
