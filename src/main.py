@@ -16,7 +16,7 @@ def main():
     args = SoT(args).etl()
 
     # tratamento dos dados - Gera Spec
-    args = Spec(args).etl()
+    #args = Spec(args).etl()
 
     # mover arquivo para pasta de processados
     funcoes.move_SoR(args)

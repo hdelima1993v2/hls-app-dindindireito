@@ -31,6 +31,8 @@ class funcoes():
         '''
         try:
             dicio_xls = {}
+            dicio_valida = {}
+            categoria_retorno = None
             saida = False
             for categoria, detalhes in dicio_yaml.items():
                 identificador = detalhes.get('identificador', None)
@@ -51,8 +53,21 @@ class funcoes():
                 else:
                     print('ALERTA: Identificador não incluído para categoria '
                         f'{categoria}')
-            #retorna a categoria caso ela seja encontrado e None caso contrário
-            return categoria if saida else None
+                dicio_valida[categoria] = {'saida':saida, 
+                                           'identificador':identificador}
+            
+            for item in dicio_valida:
+                if dicio_valida[item]['saida']:
+                    categoria_retorno = item
+                    break
+            
+            if categoria_retorno is None:
+                for item in dicio_valida:
+                    if len(dicio_valida[item]['identificador'])==0:
+                        categoria_retorno = item
+                        break
+
+            return categoria_retorno
         except Exception as e:
             erro = traceback.format_exc()
             erro = funcoes.cortar_texto(erro,'line',',')
@@ -149,9 +164,10 @@ class funcoes():
         '''
         try:
             path_arq = args['path_arq']
-            path_sor = (args['path_sor'] + '\\SOR_' + 
+            path_sor = (args['path_sor'] + '/sor_' + 
                         args['tipo'] + '_' + 
-                        args['data_ref'] +args['ext'] )
+                        args['data_ref'] + '.' + 
+                        args['path_arq'].split('.')[-1])
     
             shutil.move(path_arq, path_sor)
         except Exception as e:

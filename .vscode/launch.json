@@ -14,7 +14,7 @@
             "args": [
                 "--PATH_ARCHIVE","/home/hernandes-linux/Área de trabalho/projetos-git/automacao-financeiro/01_entrada",
                 "--PATH_YAML","${workspaceFolder}/config",
-                "--CAMINHO_BUCKET","/home/hernandes-linux/Área de trabalho/projetos-git/",
+                "--CAMINHO_BUCKET","/home/hernandes-linux/Área de trabalho/projetos-git/automacao-financeiro/",
                 "--PATH_CATEGORY","${workspaceFolder}/config/dexpara_categoria.csv",
             ]
         }

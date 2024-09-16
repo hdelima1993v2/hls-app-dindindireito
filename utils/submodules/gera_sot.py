@@ -16,12 +16,13 @@ class SoT(DinDinDireito):
                                                    self.spk_schema)
         self.data_ref = self.define_data_ref()
         self.particoes = ['tipo', 'data_ref']
-        self.caminho_sot_atual = (self.path_sot + '\\SOT_' + self.tipo + '_' 
+        self.caminho_sot_atual = (self.path_sot + '/sot_' + self.tipo + '_' 
                                   + self.data_ref  + '.parquet')
         self.args['tipo'] = self.tipo
         self.args['ext_sor'] = self.ext_sor
         self.args['data_ref'] = self.data_ref
-        self.args['path_sor'] = self.path_sot
+        self.args['path_sor'] = self.path_sor
+        self.args['path_sot'] = self.path_sot
         self.args['path_arq'] = self.path_arq
         self.args['caminho_sot_atual'] = self.caminho_sot_atual
 

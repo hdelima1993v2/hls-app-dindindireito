@@ -9,8 +9,8 @@ class DinDinDireito:
         self.path_arq = funcoes.val_exist(args['PATH_ARCHIVE'], self.tipo_arq)
         self.path_Ymal=   funcoes.val_exist(args['PATH_YAML'],['.yaml'])
         self.ext_sor = Path(self.path_arq).suffix
-        self.path_sor =  args['CAMINHO_BUCKET'] + '\\' + '02_SOR'
-        self.path_sot =  args['CAMINHO_BUCKET'] + '\\' + '03_SOT'
+        self.path_sor =  args['CAMINHO_BUCKET'] + '/' + '02_SOR'
+        self.path_sot =  args['CAMINHO_BUCKET'] + '/' + '03_SOT'
         self.yaml = funcoes.importa_yaml(self.path_Ymal)
         self.xls = funcoes.importa_xls(self.path_arq)
         self.tipo = funcoes.valida_deb_cred(self.xls, self.yaml)
