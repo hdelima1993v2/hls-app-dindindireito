@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Execução projeto",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                "--PATH_ARCHIVE","C:/Users/herna/Desktop/projetos_python/06_Automacao_financeiro/01_entrada",
+                "--PATH_YAML","${workspaceFolder}/app/config",
+                "--CAMINHO_BUCKET","C:/Users/herna/Desktop/projetos_python/06_Automacao_financeiro",
+                "--PATH_CATEGORY","${workspaceFolder}/app/config/dexpara_categoria.csv",
+            ]
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+#------------------------------------------------------------------------------
+# DÉBITO
+#------------------------------------------------------------------------------
+debito: 
+  # aba onde estão os dados
+  aba: "Lançamentos"
+
+  # colunas da sua base
+  colunas: 
+    - campo: "data"
+      nome_final: "data"
+      tipo: "data"
+      aceita_nulos: "N"
+      formato: "%d/%m/%Y"
+
+    - campo: "lançamento"
+      nome_final: "lancamento"
+      tipo: "texto"
+      aceita_nulos: "N"
+
+    - campo: "valor (R$)"
+      nome_final: "valor"
+      tipo: "numero"
+      aceita_nulos: "N"
+  
+  # Data referência
+  data_ref: "data"
+  
+  # caso sua planilha não tenha somente os dados que você precisa analisar.
+  delimitador_inferior: ""
+
+  # identificador para busca para um arquivo de débito.
+  identificador: ""
+
+  # filtro de campos
+  # para campos de data usar o formato: "dd/mm/yyyy" (entre aspas duplas)
+  # para campos de texto usar o formato entre aspas duplas
+  # para campos numéricos, usar o numero SEM aspas duplas
+  filtra_campos:
+    - campo: "data"
+      operador: "data"
+      valor: "yyyy/MM/dd"
+
+#------------------------------------------------------------------------------
+# CRÉDITO
+#------------------------------------------------------------------------------
+credito: 
+  # aba onde estão os dados
+  aba: "Lançamentos"
+
+  # colunas da sua base - Tipos podem ser somente
+  # texto, numero, data
+  colunas:
+    - campo: "data"
+      nome_final: "data"
+      tipo: "data"
+      aceita_nulos: "N"
+      formato: "%d/%m/%Y"
+
+    - campo: "lançamento"
+      nome_final: "lancamento"
+      tipo: "texto"
+      aceita_nulos: "N"
+
+    - campo: "valor"
+      nome_final: "valor"
+      tipo: "numero"
+      aceita_nulos: "N"
+  
+  # Data referência
+  data_ref: "data"
+
+  # caso sua planilha não tenha somente os dados que você precisa analisar.
+  delimitador_inferior: "total nacional do cartão - final 6261 (adicional)"
+
+  # identificador para busca para um arquivo de crédito.
+  identificador: "fatura"
